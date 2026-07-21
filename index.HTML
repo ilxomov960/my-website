@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="uz">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>23-Dars: CSS Kengaytirilgan Mavzular</title>
+
+<style>
+body {
+    font-family: "Poppins", sans-serif;
+    margin: 0;
+    background: linear-gradient(120deg, #a1c4fd, #c2e9fb);
+    color: #333;
+}
+
+header {
+    background: linear-gradient(90deg, #0072ff, #00c6ff);
+    color: white;
+    text-align: center;
+    padding: 30px;
+}
+
+main {
+    padding: 30px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px,1fr));
+    gap: 20px;
+}
+
+.card {
+    background: white;
+    border-radius: 15px;
+    padding: 20px;
+    text-align: center;
+    box-shadow: 0 5px 15px rgba(0,0,0,.2);
+    transition: .4s;
+}
+
+.card:hover {
+    transform: scale(1.05);
+}
+
+.animate-box {
+    width: 100px;
+    height: 100px;
+    background: linear-gradient(45deg,#ff6a00,#ee0979);
+    margin: 20px auto;
+    border-radius: 10px;
+    animation: moveBox 3s infinite alternate;
+}
+
+@keyframes moveBox {
+    0% {
+        transform: translateX(0);
+    }
+
+    50% {
+        transform: translateX(50px) rotate(20deg);
+    }
+
+    100% {
+        transform: translateX(0);
+    }
+}
+
+.position-example {
+    position: relative;
+    height: 180px;
+    background: #e0f7fa;
+    border-radius: 10px;
+}
+
+.circle {
+    position: absolute;
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+}
+
+.red {
+    background: red;
+    left: 40px;
+    top: 40px;
+    z-index: 1;
+}
+
+.blue {
+    background: blue;
+    left: 80px;
+    top: 70px;
+    z-index: 2;
+}
+
+.green {
+    background: green;
+    left: 120px;
+    top: 100px;
+    z-index: 3;
+}
+
+.task {
+    max-width: 700px;
+    margin: 30px auto;
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+}
+
+footer {
+    background: #0072ff;
+    color: white;
+    text-align: center;
+    padding: 20px;
+}
+</style>
+</head>
+
+<body>
+
+<header>
+    <h1>23-Dars: CSS Kengaytirilgan Mavzular</h1>
+    <p>Transform, Transition, Animation, Gradient, Shadow, Position va z-index</p>
+</header>
+
+<main>
+
+<div class="card">
+    <h3>1. Transform & Transition</h3>
+    <p>Hover qiling – karta kattalashadi.</p>
+</div>
+
+<div class="card">
+    <h3>2. Animation</h3>
+    <p>Quyidagi kvadrat harakatlanadi:</p>
+    <div class="animate-box"></div>
+</div>
+
+<div class="card">
+    <h3>3. Position & z-index</h3>
+    <div class="position-example">
+        <div class="circle red"></div>
+        <div class="circle blue"></div>
+        <div class="circle green"></div>
+    </div>
+</div>
+
+</main>
+
+<section class="task">
+    <h3>🎯 Mustaqil topshiriq</h3>
+    <ul>
+        <li>Gradient fonli karta yarating.</li>
+        <li>Aylanuvchi animatsiya yarating.</li>
+        <li>Position yordamida rasmni matn ustiga joylashtiring.</li>
+    </ul>
+</section>
+
+<footer>
+© 2025 CSS Kengaytirilgan Dars
+</footer>
+
+</body>
+</html>
